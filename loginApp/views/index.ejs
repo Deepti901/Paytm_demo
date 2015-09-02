@@ -1,0 +1,24 @@
+
+<html>
+<div class="title">  
+    <%= title %>
+</div>  
+</br>
+<form method="post" action="/home"> 
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Login page</legend>
+
+        email    :<input type="text" name = "email">
+        <br>
+        <br>
+        password:<input type="password" name = "password">
+        
+    </fieldset>
+    <input type='submit' class="btn btn-default" id='submit' value='Login'/>
+</form>
+<form method="post" action="/forgot">     
+    <input type='submit' class="btn btn-default" id='submit' value='Forgot password'/>
+</form>  
+</html>
