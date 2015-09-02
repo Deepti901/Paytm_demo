@@ -16,30 +16,31 @@ router.post('/home',function(req,res){
       res.render('error',{message:'Username/password field cannot be left empty'});
     else {
     	user.checkUser(req.body.email, req.body.password,function(err, ok){
-    		if(err)
+    	if(err)
     			res.render('error',{message:'Error in validating user:'+err})
     	else if(!ok)
     		res.render('error',{message:'Invalid username/password'});
     	else {
-             sess=req.session;
-      sess.email=req.body.email;
-      console.log("session email id:"+sess.email)
-    	res.render('welcome',{message:'Welcome '+req.body.email})
-    }
+        sess=req.session;
+        sess.email=req.body.email;
+        console.log("session email id:"+sess.email)
+    	 res.render('welcome',{message:'Welcome '+req.body.email})
+      }
     });
-}
+  }
 });
 
 router.get('/logout',function(req,res){
   req.session.destroy(function(err){
     if(err){
-    console.log(err);
+      console.log(err);
     }
     else
-    res.redirect('/');
+      res.redirect('/');
   });
 
 });
+
 router.post('/forgot',function(req, res, next) {
   res.render('forgot');
 });
