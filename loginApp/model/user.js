@@ -1,5 +1,5 @@
 // To check whether user exist or not
-
+'use strict';
 var query = require('../db/query');
 
 var user = {

@@ -1,10 +1,11 @@
+'use strict';
 
 var mysql      = require('mysql');
 // Credentials of databse
 var conn = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
-  password : 'root',
+  password : 'paytm@197',
   database : 'users'
 });
 

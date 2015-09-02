@@ -1,5 +1,5 @@
 //To send mail to user in case of forgot password
-
+'use strict';
 var nodemailer = require("nodemailer");
 var querydb = require('../db/query');
 var smtpTransport = nodemailer.createTransport("SMTP",{
