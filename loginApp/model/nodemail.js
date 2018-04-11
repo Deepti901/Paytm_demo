@@ -18,7 +18,7 @@ var mailer ={
       }
       else{
   var mailOptions={
-    from : "deepti.aggarwal@paytm.com",
+    from : "",
     to : req.query.to,
     subject : "Password Retrieval",
     text : "",
