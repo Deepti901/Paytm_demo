@@ -5,8 +5,6 @@ var querydb = require('../db/query');
 var smtpTransport = nodemailer.createTransport("SMTP",{
   service: "Gmail",
   auth: {
-      user: "deepti.aggarwal@paytm.com",
-      pass: "deepti@901"
         }
 });
 var rand,mailOptions,host,link,userInfo;
